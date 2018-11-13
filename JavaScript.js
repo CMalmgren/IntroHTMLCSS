@@ -1,14 +1,14 @@
 ﻿
 function CreateDeck() {
 
-    let cardValues = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-    let suitValues = ['H', 'C', 'D', 'S'];
-    let deck = [];
+    const cardValues = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+    const suitValues = ['h', 'c', 'd', 's'];
+    const deck = [];
 
     cardValues.forEach(function (value) {
         for (var i = 0; i < suitValues.length; i++) {
-            let theSuit = suitValues[i];
-            let card = value + theSuit;
+            const theSuit = suitValues[i];
+            const card = value + theSuit;
             deck.push(card);
         }
     });
@@ -19,8 +19,8 @@ let deck = CreateDeck();
 console.log(deck);
 
 function Deal(theDeck) {
-    let playerCards = [];
-    let computerCards = [];
+    const playerCards = [];
+    const computerCards = [];
 
     for (var i = 0; i < theDeck.length; i++) {
         if (i % 2 === 0) {
@@ -41,13 +41,12 @@ console.log(dealtCards);
 
 let theGame = {
     score: 0,
-    currentComputerCard: undefined
+    currentComputerCard: undefined,
 };
 
 function ComputerDrawsCard(allComputerCards, CardDrawnFunction) {
     setTimeout(function () {
-        let theCard = allComputerCards.pop();
-        CardDrawnFunction(theCard);
+        CardDrawnFunction(allComputerCards.pop());
     }, Math.floor(Math.random() * 6000) + 3000);  //3-6 sekunder
 }
 
@@ -58,23 +57,21 @@ ComputerDrawsCard(dealtCards.computerCards, function (theCard) {
 
 function PlayerDrawsCard(allPlayerCards, playerDrawFunction) {
     setTimeout(function () {
-        let playerCard = allPlayerCards.pop();
-        playerDrawFunction(playerCard);
+        playerDrawFunction(allPlayerCards.pop());
     }, 5000);
 }
 
 PlayerDrawsCard(dealtCards.playerCards, function (playerCard) {
     console.log("this is the player card: " + playerCard);
-    gameState.score += ScoreCards(playerCard, gameState.currentComputerCard)
+    theGame.score += ScoreCards(playerCard, theGame.currentComputerCard)
 });
     
 function ScoreCards(card1, card2) {
-    let value1 = card1.charAt(0);
-    let suit1 = card1.charAt(1);
-    let value2 = card2.charAt(0);
-    let suit2 = card2.charAt(1);
+    const value1 = card1.charAt(0);
+    const suit1 = card1.charAt(1);
+    const value2 = card2.charAt(0);
+    const suit2 = card2.charAt(1);
 
     if (value1 === value2 || suit1 === suit2) return 1;
     else return -1;
 }
-
