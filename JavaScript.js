@@ -39,10 +39,17 @@ function Deal(theDeck) {
 let dealtCards = Deal(deck);
 console.log(dealtCards);
 
-function ComputerDrawsCard(allComputerCards) {
-    return allComputerCards.pop();
+
+function ComputerDrawsCard(allComputerCards, CardDrawnFunction) {
+    setTimeout(function () {
+        let theCard = allComputerCards.pop();
+        CardDrawnFunction(theCard);
+    }, Math.floor(Math.random() * 6000) + 3000);  //3-6 sekunder
 }
-let theComputerCard = ComputerDrawsCard(dealtCards.computerCards);
+
+ComputerDrawsCard(dealtCards.computerCards, function (theCard) {
+    console.log('this is where the card shows up!' + theCard);
+});
 
 
 function PlayerDrawsCard(allPlayerCards) {
@@ -50,7 +57,7 @@ function PlayerDrawsCard(allPlayerCards) {
 }
 let thePlayerCard = PlayerDrawsCard(dealtCards.playerCards)
 
-console.log(theComputerCard);
+//console.log(theComputerCard);
 console.log(thePlayerCard);
 console.log(dealtCards);
 
@@ -66,14 +73,14 @@ function ScoreCards(card1, card2) {
 
 let score = 0;
 
-for (var i = 0; i < 4; i++) {  //en låtsasomgång
+    //for (var i = 0; i < 4; i++) {  //en låtsasomgång
 
-    theComputerCard = ComputerDrawsCard(dealtCards.computerCards)
-    thePlayerCard = PlayerDrawsCard(dealtCards.playerCards)
+    //    theComputerCard = ComputerDrawsCard(dealtCards.computerCards)
+    //    thePlayerCard = PlayerDrawsCard(dealtCards.playerCards)
 
-    let scoreDelta = ScoreCards(thePlayerCard, theComputerCard);
+    //    let scoreDelta = ScoreCards(thePlayerCard, theComputerCard);
 
-    score += scoreDelta;
-    console.log(scoreDelta)
-    console.log(score);
-}
+    //    score += scoreDelta;
+    //    console.log(scoreDelta)
+    //    console.log(score);
+    //}
