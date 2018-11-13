@@ -39,8 +39,9 @@ function Deal(theDeck) {
 let dealtCards = Deal(deck);
 console.log(dealtCards);
 
-let gameState = {
-    score: 0
+let theGame = {
+    score: 0,
+    currentComputerCard: undefined
 };
 
 function ComputerDrawsCard(allComputerCards, CardDrawnFunction) {
@@ -52,7 +53,7 @@ function ComputerDrawsCard(allComputerCards, CardDrawnFunction) {
 
 ComputerDrawsCard(dealtCards.computerCards, function (theCard) {
     console.log('this is where the computer card shows up!' + theCard);
-    gameState.currentComputerCard = theCard;
+    theGame.currentComputerCard = theCard;
 });
 
 function PlayerDrawsCard(allPlayerCards, playerDrawFunction) {
