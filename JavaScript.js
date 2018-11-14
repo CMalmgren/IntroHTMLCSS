@@ -1,5 +1,4 @@
-﻿
-function CreateDeck() {
+﻿function CreateDeck() {
 
     const cardValues = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
     const suitValues = ['h', 'c', 'd', 's'];
@@ -74,4 +73,4 @@ function ScoreCards(card1, card2) {
 
     if (value1 === value2 || suit1 === suit2) return 1;
     else return -1;
-}
+    }

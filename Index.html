@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.css.map" />
     <link rel="stylesheet" href="StyleSheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Nunito" rel="stylesheet">
-    <script src="JavaScript.js"></script>
+    <!--<script src="JavaScript.js"></script>-->
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="FunctionalityWithJQuery.js"></script>
     
     <title>Card Game</title>
     <style>
@@ -25,31 +27,32 @@
     </header>
 
     <section>
-        <time> 2 min, 50s</time>
+        <time id="Timer">Timer: 2 min, 50s</time>
         <div>Player Score: 15 points</div>
         <div>Computer Score: 5 points</div>
 
         <main>
+            <section class ="cards">
+                <div id="ComputerCard">
+                    Computer
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Card_back_16.svg" />
+                </div>
 
-            <div id="ComputerCard">
-                Computer
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Card_back_16.svg" />
-            </div>
+                <div id="DiscardCard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/English_pattern_7_of_spades.svg/360px-English_pattern_7_of_spades.svg.png" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Card_back_16.svg" />
+                </div>
 
-            <div id="DiscardCard">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/English_pattern_7_of_spades.svg/360px-English_pattern_7_of_spades.svg.png" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Card_back_16.svg" />
-            </div>
-
-            <div id="PlayerCard">
-                Player
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/English_pattern_ace_of_spades.svg/200px-English_pattern_ace_of_spades.svg.png" />
-            </div>
+                <div id="PlayerCard">
+                    Player
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/English_pattern_ace_of_spades.svg/200px-English_pattern_ace_of_spades.svg.png" />
+                </div>
+            </section>
 
             <section id="Buttons">
-                <button>New Game</button>
-                <button>Pause</button>
-                <button>Save</button>
+                <button class='newGame'>New Game</button>
+                <button id="pause">Pause</button>
+                <button id="save">Save</button>
             </section>
             <br />
         </main>
