@@ -74,9 +74,9 @@
         }
 
         SetPlayerCard(playerHand.pop())
-        let newEl = $("<strong> Played! </strong>");
-        playerCard.append(newEl);
-        newEl.hide(6000);
+        //let newEl = $("<strong> Played! </strong>");
+        //playerCard.append(newEl);
+        //newEl.hide(6000);
 
     });
 

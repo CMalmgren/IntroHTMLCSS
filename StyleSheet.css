@@ -1,6 +1,8 @@
-﻿@media only screen and (max-width: 767px) { /*For smaller devices*/
-    /*not yet implemented*/
+﻿/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+/*https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/*/
 
+@media only screen and (max-width: 767px) { /*For smaller devices*/
+    /*not yet implemented*/
 }
 
 @media screen and (min-width: 768px) { /*For larger devices*/
@@ -19,16 +21,23 @@ img {
     padding: 5px;
 }
 
+div{
+    /*display: flex;
+    justify-content: center;*/
+}
+
+.flexibleContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 main {
     background-color: #83A578;
     padding: 10px;
 }
 
-#PlayerCard, #ComputerCard {
-    margin-left: 300px;
-}
-
-    #PlayerCard:hover {
+    #cardForPlayer:hover {
         transition: transform 0.2s;
         transform: rotate(-5deg) scale(1.05)
         /*When the users mouse moves over the players card the image should
