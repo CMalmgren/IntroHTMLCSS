@@ -58,7 +58,7 @@
                 $("#ComputerCard img").attr("src", theCard.image);
             }
         });
-    }, Math.floor(Math.random() * 6000) + 3000); //3-6 sekunder
+    }, Math.floor(Math.random() * 5000) + 3000); //3-5 sekunder
 
 
     var pauseButton = $("#pause");
@@ -69,7 +69,7 @@
 
     var playerCard = $("#PlayerCard");
     playerCard.click(function () {
-        if (currentComputerCard !== undefined && currentPlayerCard !== undefined) {
+        if (!!currentComputerCard && !!currentPlayerCard) {  //är den not not. är den truthy.
             ScorePoints(currentPlayerCard, currentComputerCard)
         }
 
@@ -83,7 +83,7 @@
     function SetPlayerCard(card) {
 
         currentPlayerCard = card;
-        if (currentPlayerCard !== undefined) {
+        if (!!currentPlayerCard) {
             $("#PlayerCard img").attr("src", card.image);
         }
     }
