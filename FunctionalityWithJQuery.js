@@ -93,9 +93,12 @@
             score += 1;
         }
         else score -= 1;
-
     }
+
+
+
 });
+
 
 //ToDo: Implementera pausen, visa upp score dynamiskt
 
