@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Nunito" rel="stylesheet">
+    <title>Feedback</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="FeedbackJS.js"></script>
+</head>
+<body>
+    <form id="theForm">
+        <section>
+            <fieldset id="Form">
+                <legend><strong>Feedback</strong></legend>
+                <label><strong>Name</strong></label><br /><input type="text" id="textID" placeholder="Write your name here!" required /> <br />
+                <label><strong>How happy are you with your score?</strong> </label> <br />
+                <input type="radio" name="happiness" value="0" checked /> 0 <br />
+                <input type="radio" name="happiness" value="1" /> 1 <br />
+                <input type="radio" name="happiness" value="2" /> 2 <br />
+                <input type="radio" name="happiness" value="3" /> 3 <br />
+                <input type="radio" name="happiness" value="4" /> 4 <br />
+                <input type="radio" name="happiness" value="5" /> 5 <br />
+                <label><strong>Favourite colour:</strong> </label><input type="color" id="colorID" required /> <br />
+
+                <input type="submit"/>
+
+            </fieldset>
+        </section>
+    </form>
+    <script>
+
+    </script>
+    <section id="ResultOfForm">
+        <table id="Results">
+            <thead>
+                <tr>
+                    <td><strong>Name</strong></td>
+                    <td><strong>Happy with score</strong></td>
+                    <td><strong>Favourite colour</strong></td>
+                </tr>
+            </thead>
+            <tbody id="ResultBody">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>

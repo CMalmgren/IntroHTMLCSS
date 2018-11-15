@@ -54,7 +54,14 @@ td {
     padding: 5px;
 }
 
+#Form{
+    background-color: #83A578;
+}
 
+legend{
+    font-size: 28px;
+    text-shadow: 1px 1px 2px #83A578, 1px 1px 25px #ffffff
+}
 
 /*Palette:
     83A578
