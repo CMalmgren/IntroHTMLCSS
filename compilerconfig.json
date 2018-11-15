@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "StyleSheet.css",
+    "inputFile": "StyleSheet.scss"
+  },
+  {
+    "outputFile": "CoolerStyleSheet.css",
+    "inputFile": "CoolerStyleSheet.scss"
+  }
+]

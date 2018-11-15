@@ -1,0 +1,94 @@
+﻿/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+/*https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/*/
+
+$baseColor: #6F8269 ;
+
+@media only screen and (max-width: 767px) {
+    /*For smaller devices*/
+    /*not yet implemented*/
+}
+
+@media screen and (min-width: 768px) {
+    /*For larger devices*/
+    /*not yet implemented*/
+}
+
+body {
+    h1{
+        text-shadow: 7px 5px 18px darken($baseColor, 50%), 1px 1px 7px #ffffff;
+    }
+    background-color: $baseColor;
+    color: #323A2F;
+    font-family: 'Nunito', sans-serif;
+}
+
+/*div {
+    display: flex;
+    justify-content: center;
+    grid: 100px 300 px 100px / 3fr 1fr 3fr 
+}*/
+
+.flexibleContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main {
+    img {
+        width: 130px;
+        height: 170px;
+        padding: 5px;
+    }
+
+    background-color: #83A578;
+    padding: 10px;
+}
+
+#cardForPlayer:hover {
+    transition: transform 0.2s;
+    transform: rotate(-5deg) scale(1.05);
+}
+
+button {
+    background-color: $baseColor;
+    color: #124F00;
+    padding: 5px;
+    height: 30px;
+    width: 90px;
+}
+
+table {
+    td {
+        position: center;
+        padding: 5px;
+    }
+
+    background-color: $baseColor;
+}
+
+#Form {
+    background-color: #83A578;
+}
+
+legend {
+    font-size: 28px;
+    text-shadow: 1px 1px 2px #83A578, 1px 1px 25px #ffffff;
+}
+
+input[type=submit] {
+    box-shadow: 3px 3px 10px #124F00;
+}
+
+input[type=submit]:hover {
+    transition: transform 0.5s;
+    transform: scale(1.05);
+}
+
+/*Palette:
+    83A578
+    6F8269
+    323A2F
+    629B50
+    124F00
+*/
